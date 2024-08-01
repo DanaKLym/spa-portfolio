@@ -1,6 +1,15 @@
 $primary-font: Georgia, serif;
 
-.backgroundTest {
+.header {
+  margin: 10px 20px 10px;
+}
+
+.background {
   background: rgb(142, 142, 245);
   font-family: $primary-font;
+}
+
+.navbarLayout {
+  display: flex;
+  justify-content: space-evenly;
 }
