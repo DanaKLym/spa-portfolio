@@ -2,21 +2,29 @@ import { useState } from "react";
 import styles from "./Form.module.scss";
 
 const Form: React.FC = () => {
-  const [value, setValue] = useState({
-    name: "",
-    email: "",
-    message: "",
-    reasons: "",
-  });
-  const handleChange = (e: any) => {
-    setValue(e.target.value);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [reasons, setReasons] = useState("reasons");
+
+  const clearForm = () => {
+    setName("");
+    setEmail("");
+    setReasons("reasons");
+    setMessage("");
   };
 
   const handleSubmit = (e: any) => {
-    e.preventDefault;
+    e.preventDefault();
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Reasons:", reasons);
+    console.log("Message:", message);
+    clearForm();
   };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Enter your name:</label>
         <br />
@@ -25,8 +33,10 @@ const Form: React.FC = () => {
           name="name"
           id="name"
           required
-          value={value.name}
-          onChange={handleChange}
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
         />
       </div>
       <div>
@@ -37,8 +47,10 @@ const Form: React.FC = () => {
           name="email"
           id="email"
           required
-          value={value.email}
-          onChange={handleChange}
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
         />
       </div>
       <div>
@@ -47,10 +59,12 @@ const Form: React.FC = () => {
         <select
           name="reasons"
           id="contactingReasons"
-          value={value.reasons}
-          onChange={handleChange}
+          value={reasons}
+          onChange={(e) => {
+            setReasons(e.target.value);
+          }}
         >
-          <option value="">Please, choose an option</option>
+          <option value="reasons">Please, choose an option</option>
           <option value="Work query">Work query</option>
           <option value="Other">Other</option>
         </select>
@@ -61,8 +75,10 @@ const Form: React.FC = () => {
         <textarea
           name="message"
           id="message"
-          value={value.message}
-          onChange={handleChange}
+          value={message}
+          onChange={(e) => {
+            setMessage(e.target.value);
+          }}
         />
       </div>
       <div>
