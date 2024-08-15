@@ -7,7 +7,7 @@ const About: React.FC = () => {
     <>
       <Header />
       <div className={styles.aboutLayout}>
-        <p>
+        <p className={styles.descriptionABout}>
           I'm a developer in training and still very much at the beginning of my
           journey. It started with some projects created as a part of SheCodes
           Workshops! I am currently learning React and I am also seeking the

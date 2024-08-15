@@ -1,12 +1,16 @@
 .aboutLayout {
-  margin: 2%;
+  margin: 2% 30%;
 
   display: flex;
-  justify-content: space-around;
   gap: 2%;
 }
 
 .avatar {
   width: 15%;
   display: block;
+}
+
+.descriptionABout {
+  padding: 8% 2% 8% 3%;
+  text-align: end;
 }

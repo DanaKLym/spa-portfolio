@@ -5,10 +5,15 @@ const Skills: React.FC = () => {
   return (
     <>
       <Header />
-      <ul>
+      <ul className={styles.skillsLayout}>
         <li className={styles.progressBars}>
           <label htmlFor="htmlLevel">HTLM: </label>
-          <progress id="htmlLevel" max="100" value="85">
+          <progress
+            id="htmlLevel"
+            max="100"
+            value="85"
+            className={styles.progressColor}
+          >
             85%
           </progress>
         </li>
