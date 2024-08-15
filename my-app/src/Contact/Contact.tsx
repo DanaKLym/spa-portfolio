@@ -1,12 +1,15 @@
 import Header from "../Header/Header";
 import Form from "../Form/Form";
+import styles from "./Contact.module.scss";
 
 const Contact: React.FC = () => {
   return (
     <>
       <Header />
-      <h2>Contact me:</h2>
-      <Form />
+      <div className={styles.contactLayout}>
+        <h2>Contact me:</h2>
+        <Form />
+      </div>
     </>
   );
 };

@@ -1,3 +1,19 @@
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footerLayout {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10%;
+}
+
 .footerRefs {
   list-style: none;
+}
+
+.footerCreator {
+  text-align: center;
 }
