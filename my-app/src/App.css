@@ -1,0 +1,19 @@
+/*set the common styles here*/
+
+.container {
+  margin: 20px 80px;
+}
+
+/*TO DO:
+
+box-sizing:
+border-box:
+синтаксис SCSS
+
+Form and Skills - передивитися код запропопонований Марією
+
+Form: валідація (деактивована кнопка сабміту поки не заповнені всі поля) і eventListener (enterPress) 
+input submit замінити на button
+
+Skills: spread Operator i useState
+*/

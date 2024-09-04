@@ -1,0 +1,20 @@
+.about {
+  margin: 2% 30%;
+
+  display: flex;
+  gap: 2%;
+
+  &_avatar {
+    width: 15%;
+
+    img {
+      width: 100%;
+      margin: 15px;
+    }
+  }
+
+  &_desc {
+    padding: 8% 2% 8% 3%;
+    text-align: end;
+  }
+}
